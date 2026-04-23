@@ -1,7 +1,8 @@
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 
 export default function Navbar() {
   const location = useLocation();
+  const navigate = useNavigate();
   const isHome = location.pathname === '/';
 
   const navClass = isHome
@@ -52,7 +53,9 @@ export default function Navbar() {
             Profile
           </a>
         </div>
-        <button className="bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold rounded-full px-6 py-2 title-sm transition-transform hover:scale-100 active:scale-95 duration-200 editorial-shadow">
+        <button
+          onClick={() => navigate('/join')}
+          className="bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold rounded-full px-6 py-2 title-sm transition-transform hover:scale-100 active:scale-95 duration-200 editorial-shadow">
           Join Now
         </button>
       </nav>
