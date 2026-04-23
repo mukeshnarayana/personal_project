@@ -1,4 +1,7 @@
+import { useNavigate } from 'react-router-dom';
+
 export default function Home() {
+  const navigate = useNavigate();
   return (
     <main className="pt-24 overflow-hidden">
       {/* Hero Section */}
@@ -17,7 +20,9 @@ export default function Home() {
               Join the kinetic golf community where your monthly subscription funds meaningful impact and gives you access to high-stakes prize draws.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-gradient-to-r from-primary to-primary-container text-on-primary px-10 py-5 rounded-full text-lg font-extrabold shadow-2xl transition-transform hover:-translate-y-1 active:translate-y-0 font-headline">
+              <button
+                onClick={() => navigate('/join')}
+                className="bg-gradient-to-r from-primary to-primary-container text-on-primary px-10 py-5 rounded-full text-lg font-extrabold shadow-2xl transition-transform hover:-translate-y-1 active:translate-y-0 font-headline">
                 Start My Subscription
               </button>
               <button className="flex items-center justify-center gap-3 bg-surface-container-highest text-on-surface px-10 py-5 rounded-full text-lg font-bold hover:bg-surface-container-high transition-colors font-headline">
