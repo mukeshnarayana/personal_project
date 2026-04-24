@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import CharityDirectory from './pages/CharityDirectory';
 import PrizeDraws from './pages/PrizeDraws';
 import JoinFlow from './pages/JoinFlow';
+import SignIn from './pages/SignIn';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         {/* Isolated route for the multi-step onboarding */}
         <Route path="/join" element={<JoinFlow />} />
+        <Route path="/signin" element={<SignIn />} />
 
         {/* Main application layout */}
         <Route path="/" element={<Layout />}>

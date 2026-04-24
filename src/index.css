@@ -28,4 +28,11 @@
   .hero-gradient {
     background: linear-gradient(135deg, #9c3f00 0%, #ff7a2f 100%);
   }
+  .kinetic-gradient {
+    background: linear-gradient(135deg, #9c3f00 0%, #ff7a2f 100%);
+  }
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(24px);
+  }
 }
