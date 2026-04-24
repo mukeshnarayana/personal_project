@@ -373,7 +373,7 @@ export default function JoinFlow() {
                   <button type="button" onClick={handleBack} className="group relative flex items-center justify-center py-5 px-8 bg-surface-container-highest text-on-surface font-headline font-bold text-lg rounded-full hover:bg-surface-dim transition-all duration-300">
                     Back
                   </button>
-                  <button type="button" className="flex-1 group relative flex items-center justify-center gap-3 py-5 bg-gradient-to-r from-primary to-primary-container text-white font-headline font-bold text-lg rounded-full shadow-[0_20px_50px_rgba(156,63,0,0.25)] hover:shadow-[0_25px_60px_rgba(156,63,0,0.35)] hover:-translate-y-1 transition-all duration-300">
+                  <button type="button" onClick={() => navigate('/signin')} className="flex-1 group relative flex items-center justify-center gap-3 py-5 bg-gradient-to-r from-primary to-primary-container text-white font-headline font-bold text-lg rounded-full shadow-[0_20px_50px_rgba(156,63,0,0.25)] hover:shadow-[0_25px_60px_rgba(156,63,0,0.35)] hover:-translate-y-1 transition-all duration-300">
                     Complete Membership
                     <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
                   </button>
