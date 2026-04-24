@@ -1,6 +1,14 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function SignIn() {
+  const navigate = useNavigate();
+
+  const handleSignIn = (e) => {
+    e.preventDefault();
+    // Simulate sign in and redirect
+    navigate('/dashboard');
+  };
+
   return (
     <main className="flex h-screen w-full">
       {/* Left Side: Visual/Impact Section */}
@@ -53,7 +61,7 @@ export default function SignIn() {
             <h3 className="font-headline text-3xl font-extrabold text-on-surface tracking-tight mb-2">Welcome Back</h3>
             <p className="text-on-surface-variant font-medium">Enter your credentials to access your Impact Dashboard.</p>
           </header>
-          <form className="space-y-6">
+          <form className="space-y-6" onSubmit={handleSignIn}>
             {/* Email Input */}
             <div className="space-y-2">
               <label className="block text-sm font-bold text-on-surface-variant px-1" htmlFor="email">Email Address</label>
