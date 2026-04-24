@@ -46,12 +46,16 @@ export default function Navbar() {
           >
             Draws
           </NavLink>
-          <a
-            href="#"
-            className="text-[#2c2f30] dark:text-[#dadddf] hover:text-[#f66700] transition-colors font-body"
+          <NavLink
+            to="/signin"
+            className={({ isActive }) =>
+              isActive
+                ? "text-[#9c3f00] dark:text-[#f66700] font-bold border-b-2 border-[#9c3f00] pb-1 font-body"
+                : "text-[#2c2f30] dark:text-[#dadddf] hover:text-[#f66700] transition-colors font-body"
+            }
           >
             Profile
-          </a>
+          </NavLink>
         </div>
         <button
           onClick={() => navigate('/join')}
