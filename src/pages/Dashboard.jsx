@@ -1,4 +1,8 @@
+import { useNavigate } from 'react-router-dom';
+
 export default function Dashboard() {
+  const navigate = useNavigate();
+
   return (
     <>
       {/* Header */}
@@ -7,7 +11,10 @@ export default function Dashboard() {
           <h1 className="text-4xl font-black tracking-tight mb-2">Impact Dashboard</h1>
           <p className="text-on-surface-variant font-medium">Welcome back, Alex. Your swings are driving real change.</p>
         </div>
-        <button className="bg-gradient-to-br from-[#9c3f00] to-[#ff7a2f] text-on-primary px-8 py-3 rounded-full font-bold shadow-lg hover:opacity-90 transition-all flex items-center gap-2">
+        <button
+          onClick={() => navigate('/score-entry')}
+          className="bg-gradient-to-br from-[#9c3f00] to-[#ff7a2f] text-on-primary px-8 py-3 rounded-full font-bold shadow-lg hover:opacity-90 transition-all flex items-center gap-2"
+        >
           <span className="material-symbols-outlined">add</span>
           Enter New Score
         </button>
