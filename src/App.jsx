@@ -12,6 +12,18 @@ import MyWinnings from './pages/MyWinnings';
 import AccountSettings from './pages/AccountSettings';
 import CharityHub from './pages/CharityHub';
 
+// Admin imports
+import AdminSignIn from './pages/admin/AdminSignIn';
+import AdminDashboard from './pages/admin/AdminDashboard';
+import AdminUsers from './pages/admin/AdminUsers';
+import AdminNewUser from './pages/admin/AdminNewUser';
+import AdminDraws from './pages/admin/AdminDraws';
+import AdminNewDraw from './pages/admin/AdminNewDraw';
+import AdminCharities from './pages/admin/AdminCharities';
+import AdminNewCharity from './pages/admin/AdminNewCharity';
+import AdminWinners from './pages/admin/AdminWinners';
+import AdminAnalytics from './pages/admin/AdminAnalytics';
+
 function App() {
   return (
     <BrowserRouter>
@@ -19,6 +31,18 @@ function App() {
         {/* Isolated route for the multi-step onboarding */}
         <Route path="/join" element={<JoinFlow />} />
         <Route path="/signin" element={<SignIn />} />
+
+        {/* Admin Routes */}
+        <Route path="/admin-signin" element={<AdminSignIn />} />
+        <Route path="/admin/dashboard" element={<AdminDashboard />} />
+        <Route path="/admin/users" element={<AdminUsers />} />
+        <Route path="/admin/users/new" element={<AdminNewUser />} />
+        <Route path="/admin/draws" element={<AdminDraws />} />
+        <Route path="/admin/draws/new" element={<AdminNewDraw />} />
+        <Route path="/admin/charities" element={<AdminCharities />} />
+        <Route path="/admin/charities/new" element={<AdminNewCharity />} />
+        <Route path="/admin/winners" element={<AdminWinners />} />
+        <Route path="/admin/analytics" element={<AdminAnalytics />} />
 
         {/* Main application layout */}
         <Route path="/" element={<Layout />}>
